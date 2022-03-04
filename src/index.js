@@ -33,30 +33,30 @@ hbs.registerPartials(partialsPath)
 // Setup static directory to serve
 app.use(express.static(publicDirectoryPath))
 
-app.get('/', (req, res) => {
-    res.render('index', {
-        title: 'Login App',
-        name: 'Fabricio Barreto'
-    })
-})
+// app.get('/', (req, res) => {
+//     res.render('index', {
+//         title: 'Login App',
+//         name: 'Fabricio Barreto'
+//     })
+// })
 
-app.get('/users/login', (req, res) => {
-    res.render('login', {
-        title: 'Login App',
-        name: 'Fabricio Barreto'
-    })
-})
+// app.get('/users/login', (req, res) => {
+//     res.render('login', {
+//         title: 'Login App',
+//         name: 'Fabricio Barreto'
+//     })
+// })
 
-app.get('/user', auth, (req, res) => {
-    res.render('user', {
-        title: 'Login App',
-        name: 'Fabricio Barreto'
-    })
-})
+// app.get('/user', auth, (req, res) => {
+//     res.render('user', {
+//         title: 'Login App',
+//         name: 'Fabricio Barreto'
+//     })
+// })
 
-app.get('/users/logout', auth, (req, res) => {
-    res.redirect('/');
-})
+// app.get('/users/logout', auth, (req, res) => {
+//     res.redirect('/');
+// })
 
 
  

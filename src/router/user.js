@@ -25,14 +25,16 @@ router.post('/users/login', async (req, res) => {
 
         // console.log(user)
 
-        res.render('index', {
-            title: 'Login App',
-            name: 'Fabricio Barreto'
-        })
+        // res.render('user', {
+        //     title: 'Login App',
+        //     name: 'Fabricio Barreto'
+        // })
 
-       //  res.send({ user, token })
+        
+        res.send({ user, token })
+        //res.redirect('/user')
     } catch (e) {
-        res.status(400).send()
+        res.status(400).send() 
     }
 })
 
@@ -43,7 +45,12 @@ router.post('/users/logout', auth, async (req, res) => {
         })
         await req.user.save()
 
-       // res.send()
+        // res.render('index', {
+        //     title: 'Login App',
+        //     name: 'Fabricio Barreto'
+        // })
+
+       res.send()
     } catch (e) {
         res.status(500).send()
     }
