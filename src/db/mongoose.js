@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-mongoose.connect('mongodb://127.0.0.1:27017/task-manager-api', {
+mongoose.connect('mongodb+srv://root:root@cluster0.rbav7.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
 
 })
 
