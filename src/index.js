@@ -5,6 +5,7 @@ const taskRouter = require('./router/task')
 const bodyParser = require('body-parser')
 const hbs = require('hbs')
 const path = require('path')
+const cors = require('cors')
 
 const app = express()
 const port = process.env.PORT || 3000
@@ -15,6 +16,7 @@ app.use(bodyParser.urlencoded({
   }))
 app.use(userRouter)
 app.use(taskRouter)
+app.use(cors)
 
 
 // Define paths for Express config
@@ -36,18 +38,6 @@ app.get('/', (req, res) => {
         name: 'Fabricio Barreto'
     })
 })
-
-
-
-
- 
-
-
-
-
-
-
-
 
 
 
