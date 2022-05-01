@@ -6,6 +6,7 @@ const path = require('path')
 const cors = require('cors')
 
 
+
 connectToDb()
 const app = express()
 const port = process.env.PORT || 3000
@@ -23,11 +24,7 @@ app.set('views', viewsPath)
 
 // Setup static directory to serve
 
-app.get('/', cors(), (req, res) => {
-    res.render('index', {
- 
-    })
-})
+
 
 
 
